@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    {{> header}}
+    <body>
+        <div class="container main">
+            <div class="row text-center">
+               <div class="jumbotron text-center mb-0 pb-2" style="width:100%; border-radius:0%;">
+                    <h1 class="display-3 text-center text-primary">File Size Estimator!</h1>
+                    <hr class="my-4">
+                    <p class="lead">Please enter file for size information</p>
+                    <p class="lead"></p>
+                    <form class="text-left" action="/" method="post" enctype="multipart/form-data">
+                        <div class="form-group text-left">
+                            <label for="exampleInputFile" class="text-primary">File input</label>
+                            <input type="file" name="uploads" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+                            <small id="fileName" class="form-text text-dark">File Name: <span class="text-danger">{{name}}</span></small>
+                            <small id="fileHelp" class="form-text text-dark">File Size: <span class="text-danger">{{size}}</span></small>
+                        </div>
+                    <button type="submit" class="btn btn-success">Submit</button>
+                    </form>
+                    <hr class="mt-4">
+                </div>
+            </div>
+        </div>
+    </body>
+    {{> footer}}
+</html>
